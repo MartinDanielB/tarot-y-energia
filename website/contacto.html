@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contacto | Tarot Celestial</title>
+  <meta name="description" content="Contáctame y agenda tu lectura personalizada. Consultas de tarot por WhatsApp.">
+  <link rel="icon" type="image/png" href="https://cdn.wegic.ai/assets/onepage/agent/images/1771541735019.png?imageMogr2/format/webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cosmic-deep': '#130B29',
+            'cosmic-night': '#1A0F35',
+            'cosmic-gold': '#D4AF37',
+            'cosmic-stardust': '#E2E8F0'
+          },
+          fontFamily: {
+            heading: ['"Cinzel"', 'serif'],
+            sans: ['"Inter"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #130B29;
+      color: #E2E8F0;
+    }
+    
+    .cosmic-glow {
+      text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    }
+
+    .star-particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 6px #fff, 0 0 10px rgba(212, 175, 55, 0.8);
+      animation: twinkle 3s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.5); }
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <div id="root">
+    
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-cosmic-deep/95 backdrop-blur-sm border-b border-cosmic-gold/20">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a class="flex items-center gap-3 group" href="index.html">
+            <img alt="Logo" class="h-12 w-12 transition-transform group-hover:scale-110" src="https://cdn.wegic.ai/assets/onepage/agent/images/1771541735019.png?imageMogr2/format/webp">
+            <span class="text-2xl font-heading text-cosmic-gold cosmic-glow hidden sm:block">Tarot Celestial</span>
+          </a>
+          <div class="hidden md:flex items-center gap-8">
+            <a class="text-cosmic-stardust hover:text-cosmic-gold transition-colors duration-300 text-lg" href="index.html">Inicio</a>
+            <a class="text-cosmic-stardust hover:text-cosmic-gold transition-colors duration-300 text-lg" href="servicios.html">Servicios</a>
+            <a class="text-cosmic-stardust hover:text-cosmic-gold transition-colors duration-300 text-lg" href="lecturas.html">Lecturas</a>
+            <a class="text-cosmic-gold transition-colors duration-300 text-lg" href="contacto.html">Contacto</a>
+            <a href="https://wa.me/5491162838042" target="_blank" rel="noopener noreferrer" class="bg-cosmic-gold text-cosmic-deep px-6 py-2 rounded-full font-semibold hover:bg-cosmic-stardust transition-all duration-300 hover:scale-105">Consultar por WhatsApp</a>
+          </div>
+          <button class="md:hidden text-cosmic-gold p-2" aria-label="Toggle menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+          </button>
+        </div>
+      </div>
+      <div class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
+        <div class="star-particle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="star-particle" style="top: 60%; left: 30%; animation-delay: 1s;"></div>
+        <div class="star-particle" style="top: 40%; left: 70%; animation-delay: 2s;"></div>
+        <div class="star-particle" style="top: 80%; left: 85%; animation-delay: 0.5s;"></div>
+      </div>
+    </nav>
+
+    <main class="min-h-screen pt-20">
+      <div class="min-h-screen">
+        
+        <section class="py-20 relative overflow-hidden">
+          <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto">
+              <h1 class="text-5xl md:text-6xl font-heading text-cosmic-gold cosmic-glow mb-6">Contacto</h1>
+              <p class="text-cosmic-stardust/80 text-xl">¿Lista para descubrir las respuestas que buscas? Contáctame y agenda tu lectura personalizada.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="py-12 bg-cosmic-night">
+          <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+              
+              <div>
+                <div class="bg-cosmic-deep/50 border border-cosmic-gold/30 rounded-2xl p-8">
+                  <h2 class="text-3xl font-heading text-cosmic-gold mb-6">Solicitar Consulta</h2>
+                  <p class="text-cosmic-stardust/80 mb-6">Completa el formulario y me pondré en contacto contigo para coordinar tu lectura personalizada.</p>
+                  
+                  <form class="space-y-6">
+                    <div>
+                      <label for="nombre" class="block text-cosmic-stardust mb-2">Nombre *</label>
+                      <input id="nombre" required class="w-full px-4 py-3 bg-cosmic-night border border-cosmic-gold/30 rounded-lg text-cosmic-stardust focus:outline-none focus:border-cosmic-gold transition-colors" placeholder="Tu nombre" type="text" name="nombre">
+                    </div>
+                    <div>
+                      <label for="email" class="block text-cosmic-stardust mb-2">Email *</label>
+                      <input id="email" required class="w-full px-4 py-3 bg-cosmic-night border border-cosmic-gold/30 rounded-lg text-cosmic-stardust focus:outline-none focus:border-cosmic-gold transition-colors" placeholder="tu@email.com" type="email" name="email">
+                    </div>
+                    <div>
+                      <label for="telefono" class="block text-cosmic-stardust mb-2">Teléfono / WhatsApp *</label>
+                      <input id="telefono" required class="w-full px-4 py-3 bg-cosmic-night border border-cosmic-gold/30 rounded-lg text-cosmic-stardust focus:outline-none focus:border-cosmic-gold transition-colors" placeholder="+54 9 11 1234-5678" type="tel" name="telefono">
+                    </div>
+                    <div>
+                      <label for="tipoConsulta" class="block text-cosmic-stardust mb-2">Tipo de Consulta *</label>
+                      <select id="tipoConsulta" name="tipoConsulta" required class="w-full px-4 py-3 bg-cosmic-night border border-cosmic-gold/30 rounded-lg text-cosmic-stardust focus:outline-none focus:border-cosmic-gold transition-colors">
+                        <option value="">Selecciona una opción</option>
+                        <option value="amor">Tarot del Amor</option>
+                        <option value="laboral">Tarot Laboral</option>
+                        <option value="espiritual">Guía Espiritual</option>
+                        <option value="familiar">Relaciones Familiares</option>
+                        <option value="general">Lectura General</option>
+                        <option value="anual">Lectura Anual</option>
+                        <option value="otro">Otra consulta</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label for="mensaje" class="block text-cosmic-stardust mb-2">Mensaje</label>
+                      <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-4 py-3 bg-cosmic-night border border-cosmic-gold/30 rounded-lg text-cosmic-stardust focus:outline-none focus:border-cosmic-gold transition-colors resize-none" placeholder="Cuéntame brevemente sobre tu consulta..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-cosmic-gold text-cosmic-deep px-6 py-4 rounded-full font-semibold text-lg hover:bg-cosmic-stardust transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
+                      Enviar Consulta 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                    </button>
+                  </form>
+                </div>
+              </div>
+
+              <div class="space-y-8">
+                <div>
+                  <h2 class="text-3xl font-heading text-cosmic-gold mb-6">Información de Contacto</h2>
+                  <p class="text-cosmic-stardust/80 mb-8">Prefiero que me contactes por WhatsApp para una respuesta más rápida y directa. También puedes completar el formulario y te responderé a la brevedad.</p>
+                </div>
+                
+                <div class="space-y-6">
+                  <div class="bg-cosmic-deep/50 border border-cosmic-gold/30 rounded-xl p-6 hover:border-cosmic-gold transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-cosmic-gold mt-1 flex-shrink-0"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                      <div>
+                        <h3 class="text-xl font-heading text-cosmic-gold mb-2">WhatsApp</h3>
+                        <p class="text-cosmic-stardust/80 mb-3">La forma más rápida de contactarme</p>
+                        <a href="https://wa.me/5491162838042" target="_blank" rel="noopener noreferrer" class="inline-block bg-cosmic-gold text-cosmic-deep px-6 py-2 rounded-full font-semibold hover:bg-cosmic-stardust transition-all duration-300">Abrir WhatsApp</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="bg-cosmic-deep/50 border border-cosmic-gold/30 rounded-xl p-6">
+                    <div class="flex items-start gap-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-cosmic-gold mt-1 flex-shrink-0"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+                      <div>
+                        <h3 class="text-xl font-heading text-cosmic-gold mb-2">Email</h3>
+                        <p class="text-cosmic-stardust/80">soporte@tarot-y-energia.xyz</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="bg-cosmic-deep/50 border border-cosmic-gold/30 rounded-xl p-6">
+                    <div class="flex items-start gap-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-cosmic-gold mt-1 flex-shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                      <div>
+                        <h3 class="text-xl font-heading text-cosmic-gold mb-2">Ubicación</h3>
+                        <p class="text-cosmic-stardust/80">Buenos Aires, Capital Federal<br>Argentina</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="bg-cosmic-deep/50 border border-cosmic-gold/30 rounded-xl p-6">
+                    <div class="flex items-start gap-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-cosmic-gold mt-1 flex-shrink-0"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                      <div>
+                        <h3 class="text-xl font-heading text-cosmic-gold mb-2">Horario de Atención</h3>
+                        <p class="text-cosmic-stardust/80">Lunes a Viernes: 10:00 - 20:00 hs<br>Sábados: 10:00 - 18:00 hs<br>Domingos: Solo emergencias</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-cosmic-night/50 border border-cosmic-gold/30 rounded-xl p-6">
+                  <h3 class="text-xl font-heading text-cosmic-gold mb-4">Preguntas Frecuentes</h3>
+                  <div class="space-y-4">
+                    <div>
+                      <p class="text-cosmic-gold text-sm font-semibold mb-1">¿Cuánto tiempo tarda en responder?</p>
+                      <p class="text-cosmic-stardust/70 text-sm">Por WhatsApp suelo responder en menos de 2 horas durante horario de atención.</p>
+                    </div>
+                    <div>
+                      <p class="text-cosmic-gold text-sm font-semibold mb-1">¿Cómo se realiza el pago?</p>
+                      <p class="text-cosmic-stardust/70 text-sm">Coordinaremos el método de pago más conveniente para ti (transferencia, MercadoPago, etc.).</p>
+                    </div>
+                    <div>
+                      <p class="text-cosmic-gold text-sm font-semibold mb-1">¿Cuándo recibo mi lectura?</p>
+                      <p class="text-cosmic-stardust/70 text-sm">Las lecturas rápidas en el mismo día. Las profundas pueden tomar 24-48 hs para un análisis completo.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="bg-cosmic-night border-t border-cosmic-gold/20 relative overflow-hidden">
+      <div class="container mx-auto px-6 py-12 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <img alt="Logo" class="h-12 w-12" src="https://cdn.wegic.ai/assets/onepage/agent/images/1771541735019.png?imageMogr2/format/webp">
+              <span class="text-2xl font-heading text-cosmic-gold cosmic-glow">Tarot Celestial</span>
+            </div>
+            <p class="text-cosmic-stardust/80 text-sm leading-relaxed">Tu guía espiritual en el camino de la vida. Lecturas profesionales de tarot para amor, trabajo y crecimiento personal.</p>
+          </div>
+          <div>
+            <h3 class="text-cosmic-gold font-heading text-xl mb-4">Enlaces Rápidos</h3>
+            <ul class="space-y-2">
+              <li><a class="text-cosmic-stardust/80 hover:text-cosmic-gold transition-colors duration-300" href="index.html">Inicio</a></li>
+              <li><a class="text-cosmic-stardust/80 hover:text-cosmic-gold transition-colors duration-300" href="servicios.html">Servicios</a></li>
+              <li><a class="text-cosmic-stardust/80 hover:text-cosmic-gold transition-colors duration-300" href="lecturas.html">Lecturas</a></li>
+              <li><a class="text-cosmic-stardust/80 hover:text-cosmic-gold transition-colors duration-300" href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-cosmic-gold font-heading text-xl mb-4">Contacto</h3>
+            <p class="text-cosmic-stardust/80 text-sm mb-4">Buenos Aires, Capital Federal<br>Argentina</p>
+            <div class="flex gap-4">
+              <a href="mailto:soporte@tarot-y-energia.xyz" class="text-cosmic-stardust hover:text-cosmic-gold transition-colors duration-300">Email</a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 pt-8 border-t border-cosmic-gold/20 text-center">
+          <p class="text-cosmic-stardust/60 text-sm">© 2026 Tarot Celestial. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

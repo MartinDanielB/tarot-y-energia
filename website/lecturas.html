@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lecturas | Tarot Celestial</title>
+  <meta name="description" content="Descubre información general sobre el tarot o accede a lecturas personalizadas. Prueba nuestra lectura interactiva gratuita.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cosmic-deep': '#130B29',
+            'cosmic-night': '#1A0F35',
+            'cosmic-purple': '#2D1B4E', 
+            'cosmic-gold': '#D4AF37',
+            'cosmic-stardust': '#E2E8F0'
+          },
+          fontFamily: {
+            heading: ['"Cinzel"', 'serif'],
+            sans: ['"Inter"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #130B29;
+      color: #E2E8F0;
+    }
+    .cosmic-glow {
+      text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    }
+    .star-particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 6px #fff, 0 0 10px rgba(212, 175, 55, 0.8);
+      animation: twinkle 3s infinite ease-in-out;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.5); }
+    }
+    /* Tarot App Specific Animations */
+    .card-reveal {
+      animation: reveal 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    @keyframes reveal {
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-in forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .btn-active {
+      background-color: rgba(212, 175, 55, 0.15) !important;
+      border-color: #D4AF37 !important;
+      color: #E2E8F0 !important;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.2) !important;
+    }
+    .btn-active span.font-heading {
+      color: #D4AF37 !important;
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <div id="root">
+    
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-cosmic-deep/95 backdrop-blur-sm border-b border-cosmic-gold/20">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a class="flex items-center gap-3 group" href="index.html">
+            <span class="text-2xl font-heading text-cosmic-gold cosmic-glow">Tarot Celestial</span>
+          </a>
+          <div class="hidden md:flex items-center gap-8">
+            <a class="text-cosmic-stardust hover:text-cosmic-gold transition-colors duration-300 text-lg" href="index.html">Inicio</a>
+            <a class="text-cosmic-stardust hover:text-cosmic-gold transition-colors duration-300 text-lg" href="servicios.html">Servicios</a>
+            <a class="text-cosmic-gold transition-colors duration-300 text-lg" href="lecturas.html">Lecturas</a>
+            <a class="text-cosmic-stardust hover:text-cosmic-gold transition-colors duration-300 text-lg" href="contacto.html">Contacto</a>
+            <a href="https://wa.me/5491162838042" target="_blank" class="bg-cosmic-gold text-cosmic-deep px-6 py-2 rounded-full font-semibold hover:bg-cosmic-stardust transition-all duration-300 hover:scale-105">Consultar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
+        <div class="star-particle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="star-particle" style="top: 60%; left: 30%; animation-delay: 1s;"></div>
+        <div class="star-particle" style="top: 40%; left: 70%; animation-delay: 2s;"></div>
+      </div>
+    </nav>
+
+    <main class="min-h-screen pt-24">
+      
+      <section class="py-12 relative overflow-hidden bg-gradient-to-b from-cosmic-purple/20 to-transparent">
+        <div class="container mx-auto px-6">
+          <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-5xl md:text-6xl font-heading text-cosmic-gold cosmic-glow mb-6">El Oráculo Digital</h1>
+            <p class="text-cosmic-stardust/80 text-xl">Concéntrate en tu pregunta, despeja tu mente y deja que las cartas te guíen en esta lectura interactiva.</p>
+          </div>
+
+          <div class="max-w-5xl mx-auto" id="tarot-webapp-container">
+            <div class="border-2 border-cosmic-gold/30 rounded-2xl p-6 md:p-10 bg-cosmic-night/60 backdrop-blur-md text-center shadow-2xl">
+              
+              <div class="flex flex-col gap-4 bg-cosmic-deep/80 p-6 rounded-2xl border border-cosmic-gold/20 max-w-2xl mx-auto shadow-inner">
+                <input id="questionInput" class="flex h-14 w-full rounded-md px-4 bg-cosmic-night border border-cosmic-gold/30 text-lg text-center text-cosmic-stardust placeholder:text-cosmic-stardust/40 focus:outline-none focus:border-cosmic-gold focus:ring-1 focus:ring-cosmic-gold transition-all" placeholder="¿Cuál es tu pregunta? (Opcional)">
+                
+                <div class="grid grid-cols-2 gap-4">
+                  <button id="btn-one-card" onclick="selectMode('one')" class="btn-active p-4 rounded-xl border transition-all duration-300 flex flex-col items-center gap-2 bg-cosmic-night border-cosmic-gold/20 text-cosmic-stardust/70 hover:bg-cosmic-purple/30 cursor-pointer">
+                    <span class="font-heading font-bold text-cosmic-gold text-lg">Carta Única</span>
+                    <span class="text-xs opacity-70">Visión Diaria / Respuesta Directa</span>
+                  </button>
+                  <button id="btn-three-cards" onclick="selectMode('three')" class="p-4 rounded-xl border transition-all duration-300 flex flex-col items-center gap-2 bg-cosmic-night border-cosmic-gold/20 text-cosmic-stardust/70 hover:bg-cosmic-purple/30 cursor-pointer">
+                    <span class="font-heading font-bold text-lg">Tres Cartas</span>
+                    <span class="text-xs opacity-70">Pasado, Presente, Futuro</span>
+                  </button>
+                </div>
+                
+                <button onclick="drawCards()" class="inline-flex items-center justify-center gap-2 font-semibold bg-cosmic-gold text-cosmic-deep rounded-md px-8 mt-2 text-xl h-14 transition-all duration-300 hover:scale-105 hover:bg-cosmic-stardust cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path></svg>
+                  Revelar mi Destino
+                </button>
+              </div>
+
+              <div id="card-area" class="w-full min-h-[350px] mt-12 flex justify-center items-stretch gap-6 flex-wrap relative">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-30">
+                  <div class="w-64 h-80 border-2 border-dashed border-cosmic-gold/30 rounded-xl flex items-center justify-center">
+                    <span class="text-cosmic-gold/50 font-heading text-xl">El Mazo Te Espera</span>
+                  </div>
+                </div>
+              </div>
+
+              <div id="reading-output" class="mt-12 hidden text-left bg-cosmic-deep/90 border border-cosmic-gold/50 rounded-xl p-8 shadow-lg shadow-cosmic-gold/10">
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-heading text-cosmic-gold cosmic-glow mb-4">El Significado del Tarot</h2>
+            <p class="text-cosmic-stardust/80 text-lg max-w-2xl mx-auto">Comprende cómo se estructuran las lecturas y la simbología detrás de las cartas.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-cosmic-night/50 border border-cosmic-gold/20 rounded-xl p-8 hover:border-cosmic-gold/40 transition-all duration-300">
+              <h3 class="text-cosmic-gold font-heading text-2xl mb-4">Arcanos Mayores</h3>
+              <p class="text-cosmic-stardust/80 leading-relaxed">Las 22 cartas principales del tarot representan las lecciones kármicas y los grandes arquetipos espirituales de nuestra vida. Marcan eventos significativos y transformaciones profundas.</p>
+            </div>
+            <div class="bg-cosmic-night/50 border border-cosmic-gold/20 rounded-xl p-8 hover:border-cosmic-gold/40 transition-all duration-300">
+              <h3 class="text-cosmic-gold font-heading text-2xl mb-4">Arcanos Menores</h3>
+              <p class="text-cosmic-stardust/80 leading-relaxed">Las 56 cartas restantes reflejan situaciones cotidianas, emociones transitorias y aspectos prácticos de la vida diaria, divididas en Copas, Espadas, Bastos y Oros.</p>
+            </div>
+            <div class="bg-cosmic-night/50 border border-cosmic-gold/20 rounded-xl p-8 hover:border-cosmic-gold/40 transition-all duration-300">
+              <h3 class="text-cosmic-gold font-heading text-2xl mb-4">Interpretación</h3>
+              <p class="text-cosmic-stardust/80 leading-relaxed">Las cartas no sentencian un futuro inamovible. Actúan como un espejo de tu energía actual y subconsciente, ofreciendo guía para que tomes las mejores decisiones.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 relative overflow-hidden bg-cosmic-night">
+        <div class="container mx-auto px-6">
+          <div class="max-w-4xl mx-auto text-center border border-cosmic-gold/30 rounded-2xl p-12 bg-cosmic-deep/50">
+            <h2 class="text-4xl font-heading text-cosmic-gold cosmic-glow mb-4">¿Necesitas Una Lectura Humana y Profunda?</h2>
+            <p class="text-cosmic-stardust/80 text-lg mb-8">El oráculo digital es una excelente guía diaria, pero si buscas desentrañar situaciones complejas con empatía y experiencia, agenda una consulta privada conmigo.</p>
+            <a class="bg-cosmic-gold text-cosmic-deep px-8 py-4 rounded-full font-semibold text-lg hover:bg-cosmic-stardust transition-all duration-300 hover:scale-105 inline-block" href="contacto.html">Solicitar Lectura Personalizada</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="bg-cosmic-deep border-t border-cosmic-gold/20 py-8 text-center">
+      <p class="text-cosmic-stardust/60 text-sm">© 2026 Tarot Celestial. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <script>
+    let currentMode = 'one';
+
+    // Expanded Tarot API Database (JSON)
+    const tarotDeck = [
+      { name: "El Loco", essence: "Nuevos comienzos, fe ciega y espontaneidad.", meaning: "Te invita a dar un salto de fe. Es momento de soltar las expectativas y confiar en que el universo te sostendrá en esta nueva aventura." },
+      { name: "El Mago", essence: "Poder, manifestación y recursos.", meaning: "Tienes todas las herramientas necesarias a tu disposición. Es el momento de pasar a la acción y manifestar tus intenciones en la realidad." },
+      { name: "La Sacerdotisa", essence: "Intuición, sabiduría interior y el subconsciente.", meaning: "Las respuestas que buscas no están en el exterior. Conéctate con tu intuición y presta atención a tus sueños y presentimientos." },
+      { name: "La Emperatriz", essence: "Abundancia, fertilidad y naturaleza.", meaning: "Un ciclo de crecimiento y nutrición. Es momento de cuidar de ti mismo, de tus proyectos y de conectar con la belleza que te rodea." },
+      { name: "El Emperador", essence: "Estructura, autoridad y bases sólidas.", meaning: "Se requiere disciplina, lógica y orden. Es el momento de establecer límites claros y tomar el control de tu situación." },
+      { name: "El Hierofante", essence: "Tradición, creencias y educación espiritual.", meaning: "Un llamado a honrar las tradiciones o buscar guía en mentores o sistemas de creencias establecidos." },
+      { name: "Los Enamorados", essence: "Amor, alineación de valores y decisiones.", meaning: "Representa una encrucijada importante. Debes tomar una decisión basada en tus valores más profundos y auténticos." },
+      { name: "El Carro", essence: "Determinación, fuerza de voluntad y victoria.", meaning: "Avanza con confianza. A pesar de los obstáculos o las fuerzas opuestas, tu determinación te llevará al éxito." },
+      { name: "La Fuerza", essence: "Coraje interior, compasión y paciencia.", meaning: "No intentes forzar las cosas. El verdadero poder proviene de la suavidad, el autocontrol y la persuasión amorosa." },
+      { name: "El Ermitaño", essence: "Introspección, soledad y guía interior.", meaning: "Es necesario un retiro temporal del ruido del mundo. Busca la luz en tu interior antes de tomar el siguiente paso." },
+      { name: "La Rueda de la Fortuna", essence: "Ciclos, destino y puntos de inflexión.", meaning: "La vida está en constante movimiento. Acepta los cambios que llegan, pues son parte de tu evolución predestinada." },
+      { name: "La Justicia", essence: "Equidad, verdad y causa/efecto.", meaning: "Tus acciones pasadas están dando frutos. Mantén la integridad y busca el equilibrio en todas tus decisiones." },
+      { name: "La Muerte", essence: "Transformación, finales y transiciones.", meaning: "Algo debe terminar para que nazca algo nuevo. No temas a este cierre, es necesario para tu evolución espiritual." },
+      { name: "La Estrella", essence: "Esperanza, fe y sanación.", meaning: "Después de la tormenta llega la calma. Estás entrando en un periodo de paz, renovación espiritual y profunda inspiración." }
+    ];
+
+    function selectMode(mode) {
+      currentMode = mode;
+      const btnOne = document.getElementById('btn-one-card');
+      const btnThree = document.getElementById('btn-three-cards');
+
+      if (mode === 'one') {
+        btnOne.classList.add('btn-active');
+        btnOne.querySelector('span.font-heading').classList.add('text-cosmic-gold');
+        btnThree.classList.remove('btn-active');
+        btnThree.querySelector('span.font-heading').classList.remove('text-cosmic-gold');
+      } else {
+        btnThree.classList.add('btn-active');
+        btnThree.querySelector('span.font-heading').classList.add('text-cosmic-gold');
+        btnOne.classList.remove('btn-active');
+        btnOne.querySelector('span.font-heading').classList.remove('text-cosmic-gold');
+      }
+    }
+
+    function drawCards() {
+      const cardArea = document.getElementById('card-area');
+      const readingOutput = document.getElementById('reading-output');
+      const question = document.getElementById('questionInput').value;
+      const cardsToDraw = currentMode === 'one' ? 1 : 3;
+      
+      // Reset UI
+      cardArea.innerHTML = '';
+      readingOutput.classList.add('hidden');
+      readingOutput.classList.remove('fade-in');
+
+      // Shuffle logic
+      let shuffled = [...tarotDeck].sort(() => 0.5 - Math.random());
+      let selectedCards = shuffled.slice(0, cardsToDraw);
+      const positions = ["Pasado", "Presente", "Futuro"];
+
+      // Render cards
+      selectedCards.forEach((card, index) => {
+        const cardHTML = `
+          <div class="card-reveal w-64 flex flex-col items-center gap-4" style="animation-delay: ${index * 0.2}s">
+            ${currentMode === 'three' ? `<span class="text-cosmic-gold font-bold text-sm uppercase tracking-wider">${positions[index]}</span>` : ''}
+            <div class="w-full h-80 bg-cosmic-deep/90 border border-cosmic-gold/40 rounded-xl flex flex-col items-center justify-center p-6 text-center shadow-lg shadow-cosmic-gold/20 relative group">
+              <h3 class="font-heading text-2xl text-cosmic-gold mb-4 cosmic-glow">${card.name}</h3>
+              <p class="text-cosmic-stardust/90 text-sm leading-relaxed italic">"${card.essence}"</p>
+            </div>
+          </div>
+        `;
+        cardArea.innerHTML += cardHTML;
+      });
+
+      // Generate Reading Logic
+      setTimeout(() => {
+        let readingHTML = `<h3 class="text-2xl font-heading text-cosmic-gold mb-6 border-b border-cosmic-gold/30 pb-4">Interpretación de tu Lectura</h3>`;
+        
+        if (question.trim() !== '') {
+          readingHTML += `<p class="text-cosmic-stardust/60 italic mb-6">Tu pregunta: "${question}"</p>`;
+        }
+
+        if (currentMode === 'one') {
+          readingHTML += `
+            <p class="text-cosmic-stardust text-lg leading-relaxed mb-4">El universo te ha revelado <strong>${selectedCards[0].name}</strong>.</p>
+            <p class="text-cosmic-stardust text-lg leading-relaxed">${selectedCards[0].meaning}</p>
+          `;
+        } else {
+          readingHTML += `
+            <div class="space-y-6">
+              <div>
+                <h4 class="text-cosmic-gold font-heading text-xl mb-2">Influencia del Pasado: ${selectedCards[0].name}</h4>
+                <p class="text-cosmic-stardust text-lg leading-relaxed">Esta carta indica que los eventos recientes han estado marcados por ${selectedCards[0].essence.toLowerCase()} ${selectedCards[0].meaning}</p>
+              </div>
+              <div>
+                <h4 class="text-cosmic-gold font-heading text-xl mb-2">Tu Presente: ${selectedCards[1].name}</h4>
+                <p class="text-cosmic-stardust text-lg leading-relaxed">Actualmente, la energía central en tu situación gira en torno a ${selectedCards[1].essence.toLowerCase()} ${selectedCards[1].meaning}</p>
+              </div>
+              <div>
+                <h4 class="text-cosmic-gold font-heading text-xl mb-2">Hacia el Futuro: ${selectedCards[2].name}</h4>
+                <p class="text-cosmic-stardust text-lg leading-relaxed">Si continúas en tu camino actual, la guía espiritual apunta hacia ${selectedCards[2].essence.toLowerCase()} ${selectedCards[2].meaning}</p>
+              </div>
+            </div>
+          `;
+        }
+
+        readingOutput.innerHTML = readingHTML;
+        readingOutput.classList.remove('hidden');
+        readingOutput.classList.add('fade-in');
+        
+        // Scroll slightly down to read the result
+        readingOutput.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, (cardsToDraw * 200) + 600); // Wait for cards to finish animating
+    }
+  </script>
+</body>
+</html>

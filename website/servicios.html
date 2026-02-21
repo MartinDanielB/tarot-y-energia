@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Servicios | Tarot Celestial</title>
+  <meta name="description" content="Lecturas personalizadas para cada área de tu vida. Consultas de tarot por WhatsApp.">
+  <link rel="icon" type="image/png" href="https://cdn.wegic.ai/assets/onepage/agent/images/1771541735019.png?imageMogr2/format/webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cosmic-deep': '#130B29',
+            'cosmic-night': '#1A0F35',
+            'cosmic-gold': '#D4AF37',
+            'cosmic-stardust': '#E2E8F0'
+          },
+          fontFamily: {
+            heading: ['"Cinzel"', 'serif'],
+            sans: ['"Inter"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #130B29;
+      color: #E2E8F0;
+    }
+    
+    .cosmic-glow {
+      text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    }
+
+    .star-particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 6px #fff, 0 0 10px rgba(212, 175, 55, 0.8);
+      animation: twinkle 3s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.5); }
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <div id="root">
+    
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-cosmic-deep/95 backdrop-blur-sm border-b border-cosmic-gold/20">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a class="flex items-center gap-3 group" href="/">
+            <img alt="Logo" class="h-12 w-12 transition-transform group-hover:scale-110" src="https://cdn.wegic.ai/assets/onepage/agent/images/1771541735019.png?imageMogr2/format/webp">
+            <span class="text-2xl font-heading text-cosmic-gold cosmic-glow hidden sm:block">Tarot Celestial</span>
+          </a>
+          <div class="hidden md:flex items-center gap-8">
+            <a class="text-cosmic-stardust hover:text-cosmic-gold transition-colors duration-300 text-lg" href="/">Inicio</a>
+            <a class="text-cosmic-gold transition-colors duration-300 text-lg" href="/servicios.html">Servicios</a>
+            <a class="text-cosmic-stardust hover:text-cosmic-gold transition-colors duration-300 text-lg" href="/lecturas.html">Lecturas</a>
+            <a class="text-cosmic-stardust hover:text-cosmic-gold transition-colors duration-300 text-lg" href="/contacto.html">Contacto</a>
+            <a href="https://wa.me/5491162838042" target="_blank" rel="noopener noreferrer" class="bg-cosmic-gold text-cosmic-deep px-6 py-2 rounded-full font-semibold hover:bg-cosmic-stardust transition-all duration-300 hover:scale-105">Consultar por WhatsApp</a>
+          </div>
+          <button class="md:hidden text-cosmic-gold p-2" aria-label="Toggle menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+          </button>
+        </div>
+      </div>
+      <div class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
+        <div class="star-particle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="star-particle" style="top: 60%; left: 30%; animation-delay: 1s;"></div>
+        <div class="star-particle" style="top: 40%; left: 70%; animation-delay: 2s;"></div>
+        <div class="star-particle" style="top: 80%; left: 85%; animation-delay: 0.5s;"></div>
+      </div>
+    </nav>
+
+    <main class="min-h-screen pt-20">
+      <div class="min-h-screen">
+        
+        <section class="py-20 relative overflow-hidden">
+          <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto">
+              <h1 class="text-5xl md:text-6xl font-heading text-cosmic-gold cosmic-glow mb-6">Servicios de Tarot</h1>
+              <p class="text-cosmic-stardust/80 text-xl">Lecturas personalizadas para cada área de tu vida. Todas las consultas se realizan por WhatsApp en un ambiente de confidencialidad y respeto.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="py-12 bg-cosmic-night">
+          <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
+              <div class="bg-cosmic-deep/50 border border-cosmic-gold/30 rounded-2xl p-8 hover:border-cosmic-gold transition-all duration-300 group">
+                <div class="mb-6 text-cosmic-gold group-hover:scale-110 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </div>
+                <h3 class="text-2xl font-heading text-cosmic-gold mb-3 text-center">Tarot del Amor</h3>
+                <p class="text-cosmic-stardust/80 text-center mb-6">Encuentra claridad en tus relaciones sentimentales</p>
+                <ul class="space-y-2 mb-6">
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>¿Tu relación está pasando por un momento difícil?</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>¿Buscas conocer si llegará el amor?</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>¿Necesitas saber qué siente esa persona por ti?</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Orientación sobre decisiones amorosas importantes</span></li>
+                </ul>
+                <div class="text-center pt-4 border-t border-cosmic-gold/20">
+                  <p class="text-cosmic-gold font-semibold text-lg mb-4">Desde $2.000</p>
+                  <a href="https://wa.me/5491162838042" target="_blank" rel="noopener noreferrer" class="inline-block bg-cosmic-gold text-cosmic-deep px-6 py-2 rounded-full font-semibold hover:bg-cosmic-stardust transition-all duration-300">Consultar</a>
+                </div>
+              </div>
+
+              <div class="bg-cosmic-deep/50 border border-cosmic-gold/30 rounded-2xl p-8 hover:border-cosmic-gold transition-all duration-300 group">
+                <div class="mb-6 text-cosmic-gold group-hover:scale-110 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>
+                </div>
+                <h3 class="text-2xl font-heading text-cosmic-gold mb-3 text-center">Tarot Laboral y Financiero</h3>
+                <p class="text-cosmic-stardust/80 text-center mb-6">Guía para tus decisiones profesionales y económicas</p>
+                <ul class="space-y-2 mb-6">
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>¿Estás en duda sobre un cambio de trabajo?</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>¿Necesitas orientación sobre un proyecto o emprendimiento?</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>¿Buscas claridad sobre tu situación financiera?</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Consejos para mejorar tu situación laboral</span></li>
+                </ul>
+                <div class="text-center pt-4 border-t border-cosmic-gold/20">
+                  <p class="text-cosmic-gold font-semibold text-lg mb-4">Desde $2.500</p>
+                  <a href="https://wa.me/5491162838042" target="_blank" rel="noopener noreferrer" class="inline-block bg-cosmic-gold text-cosmic-deep px-6 py-2 rounded-full font-semibold hover:bg-cosmic-stardust transition-all duration-300">Consultar</a>
+                </div>
+              </div>
+
+              <div class="bg-cosmic-deep/50 border border-cosmic-gold/30 rounded-2xl p-8 hover:border-cosmic-gold transition-all duration-300 group">
+                <div class="mb-6 text-cosmic-gold group-hover:scale-110 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
+                </div>
+                <h3 class="text-2xl font-heading text-cosmic-gold mb-3 text-center">Guía Espiritual</h3>
+                <p class="text-cosmic-stardust/80 text-center mb-6">Conecta con tu propósito y crecimiento personal</p>
+                <ul class="space-y-2 mb-6">
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Autoconocimiento y evolución espiritual</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Superación de bloqueos emocionales</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Conexión con tu intuición y guía interior</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Respuestas sobre tu camino de vida</span></li>
+                </ul>
+                <div class="text-center pt-4 border-t border-cosmic-gold/20">
+                  <p class="text-cosmic-gold font-semibold text-lg mb-4">Desde $2.500</p>
+                  <a href="https://wa.me/5491162838042" target="_blank" rel="noopener noreferrer" class="inline-block bg-cosmic-gold text-cosmic-deep px-6 py-2 rounded-full font-semibold hover:bg-cosmic-stardust transition-all duration-300">Consultar</a>
+                </div>
+              </div>
+
+              <div class="bg-cosmic-deep/50 border border-cosmic-gold/30 rounded-2xl p-8 hover:border-cosmic-gold transition-all duration-300 group">
+                <div class="mb-6 text-cosmic-gold group-hover:scale-110 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                </div>
+                <h3 class="text-2xl font-heading text-cosmic-gold mb-3 text-center">Relaciones Familiares</h3>
+                <p class="text-cosmic-stardust/80 text-center mb-6">Claridad en tus vínculos familiares</p>
+                <ul class="space-y-2 mb-6">
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Conflictos familiares y cómo resolverlos</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Relaciones con hijos, padres o hermanos</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Dinámicas familiares complejas</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Sanación de vínculos</span></li>
+                </ul>
+                <div class="text-center pt-4 border-t border-cosmic-gold/20">
+                  <p class="text-cosmic-gold font-semibold text-lg mb-4">Desde $2.000</p>
+                  <a href="https://wa.me/5491162838042" target="_blank" rel="noopener noreferrer" class="inline-block bg-cosmic-gold text-cosmic-deep px-6 py-2 rounded-full font-semibold hover:bg-cosmic-stardust transition-all duration-300">Consultar</a>
+                </div>
+              </div>
+
+              <div class="bg-cosmic-deep/50 border border-cosmic-gold/30 rounded-2xl p-8 hover:border-cosmic-gold transition-all duration-300 group">
+                <div class="mb-6 text-cosmic-gold group-hover:scale-110 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
+                </div>
+                <h3 class="text-2xl font-heading text-cosmic-gold mb-3 text-center">Lectura General</h3>
+                <p class="text-cosmic-stardust/80 text-center mb-6">Panorama completo de tu situación actual</p>
+                <ul class="space-y-2 mb-6">
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Visión integral de todas las áreas de tu vida</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Presente, pasado y posibilidades futuras</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Energías que te rodean actualmente</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Consejos y recomendaciones generales</span></li>
+                </ul>
+                <div class="text-center pt-4 border-t border-cosmic-gold/20">
+                  <p class="text-cosmic-gold font-semibold text-lg mb-4">Desde $3.000</p>
+                  <a href="https://wa.me/5491162838042" target="_blank" rel="noopener noreferrer" class="inline-block bg-cosmic-gold text-cosmic-deep px-6 py-2 rounded-full font-semibold hover:bg-cosmic-stardust transition-all duration-300">Consultar</a>
+                </div>
+              </div>
+
+              <div class="bg-cosmic-deep/50 border border-cosmic-gold/30 rounded-2xl p-8 hover:border-cosmic-gold transition-all duration-300 group">
+                <div class="mb-6 text-cosmic-gold group-hover:scale-110 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                </div>
+                <h3 class="text-2xl font-heading text-cosmic-gold mb-3 text-center">Lectura Anual</h3>
+                <p class="text-cosmic-stardust/80 text-center mb-6">Descubre qué te depara el año</p>
+                <ul class="space-y-2 mb-6">
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Panorama mes a mes del año que viene</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Oportunidades y desafíos</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Mejores momentos para tomar decisiones</span></li>
+                  <li class="text-cosmic-stardust/70 text-sm flex items-start gap-2"><span class="text-cosmic-gold mt-1">✦</span><span>Tendencias energéticas anuales</span></li>
+                </ul>
+                <div class="text-center pt-4 border-t border-cosmic-gold/20">
+                  <p class="text-cosmic-gold font-semibold text-lg mb-4">Desde $5.000</p>
+                  <a href="https://wa.me/5491162838042" target="_blank" rel="noopener noreferrer" class="inline-block bg-cosmic-gold text-cosmic-deep px-6 py-2 rounded-full font-semibold hover:bg-cosmic-stardust transition-all duration-300">Consultar</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="py-20">
+          <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+              <div class="bg-cosmic-night border border-cosmic-gold/30 rounded-2xl p-8 md:p-12">
+                <h2 class="text-3xl md:text-4xl font-heading text-cosmic-gold cosmic-glow mb-8 text-center">Tipos de Lecturas</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div class="text-center">
+                    <div class="mb-4">
+                      <img alt="Lectura Rápida" class="w-24 h-24 mx-auto" loading="lazy" src="https://cdn.wegic.ai/assets/onepage/agent/images/1771541764415.png?imageMogr2/format/webp">
+                    </div>
+                    <h3 class="text-2xl font-heading text-cosmic-gold mb-3">Lectura Rápida</h3>
+                    <p class="text-cosmic-stardust/80 mb-4">Respuesta directa a una pregunta específica. Ideal para consultas puntuales y decisiones inmediatas.</p>
+                    <p class="text-cosmic-gold font-semibold text-xl">$2.000 - $3.500</p>
+                  </div>
+                  <div class="text-center">
+                    <div class="mb-4">
+                      <img alt="Lectura Profunda" class="w-24 h-24 mx-auto" loading="lazy" src="https://cdn.wegic.ai/assets/onepage/agent/images/1771541766609.png?imageMogr2/format/webp">
+                    </div>
+                    <h3 class="text-2xl font-heading text-cosmic-gold mb-3">Lectura Profunda</h3>
+                    <p class="text-cosmic-stardust/80 mb-4">Análisis completo y detallado de tu situación. Incluye múltiples aspectos y orientación personalizada.</p>
+                    <p class="text-cosmic-gold font-semibold text-xl">$5.000 - $10.000</p>
+                  </div>
+                </div>
+                <div class="mt-12 text-center">
+                  <p class="text-cosmic-stardust/80 mb-6">El precio final depende de la complejidad de la consulta y el tiempo dedicado a tu lectura.</p>
+                  <a class="inline-block bg-cosmic-gold text-cosmic-deep px-8 py-4 rounded-full font-semibold text-lg hover:bg-cosmic-stardust transition-all duration-300 hover:scale-105" href="/contacto.html">Solicitar Presupuesto Personalizado</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="py-20 bg-cosmic-night">
+          <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+              <h2 class="text-4xl md:text-5xl font-heading text-cosmic-gold cosmic-glow mb-6">¿Cómo funciona?</h2>
+              <p class="text-cosmic-stardust/80 text-lg max-w-2xl mx-auto">Proceso simple y cómodo desde tu hogar</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-cosmic-gold rounded-full flex items-center justify-center mx-auto mb-4 text-cosmic-deep font-heading text-2xl">1</div>
+                <h3 class="text-xl font-heading text-cosmic-gold mb-2">Contacta</h3>
+                <p class="text-cosmic-stardust/70 text-sm">Envíame un mensaje por WhatsApp</p>
+              </div>
+              <div class="text-center">
+                <div class="w-16 h-16 bg-cosmic-gold rounded-full flex items-center justify-center mx-auto mb-4 text-cosmic-deep font-heading text-2xl">2</div>
+                <h3 class="text-xl font-heading text-cosmic-gold mb-2">Consulta</h3>
+                <p class="text-cosmic-stardust/70 text-sm">Cuéntame tu situación o pregunta</p>
+              </div>
+              <div class="text-center">
+                <div class="w-16 h-16 bg-cosmic-gold rounded-full flex items-center justify-center mx-auto mb-4 text-cosmic-deep font-heading text-2xl">3</div>
+                <h3 class="text-xl font-heading text-cosmic-gold mb-2">Pago</h3>
+                <p class="text-cosmic-stardust/70 text-sm">Acordamos el tipo de lectura y precio</p>
+              </div>
+              <div class="text-center">
+                <div class="w-16 h-16 bg-cosmic-gold rounded-full flex items-center justify-center mx-auto mb-4 text-cosmic-deep font-heading text-2xl">4</div>
+                <h3 class="text-xl font-heading text-cosmic-gold mb-2">Lectura</h3>
+                <p class="text-cosmic-stardust/70 text-sm">Recibe tu lectura personalizada</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="bg-cosmic-night border-t border-cosmic-gold/20 relative overflow-hidden">
+      <div class="container mx-auto px-6 py-12 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <img alt="Logo" class="h-12 w-12" src="https://cdn.wegic.ai/assets/onepage/agent/images/1771541735019.png?imageMogr2/format/webp">
+              <span class="text-2xl font-heading text-cosmic-gold cosmic-glow">Tarot Celestial</span>
+            </div>
+            <p class="text-cosmic-stardust/80 text-sm leading-relaxed">Tu guía espiritual en el camino de la vida. Lecturas profesionales de tarot para amor, trabajo y crecimiento personal.</p>
+          </div>
+          <div>
+            <h3 class="text-cosmic-gold font-heading text-xl mb-4">Enlaces Rápidos</h3>
+            <ul class="space-y-2">
+              <li><a class="text-cosmic-stardust/80 hover:text-cosmic-gold transition-colors duration-300" href="/">Inicio</a></li>
+              <li><a class="text-cosmic-stardust/80 hover:text-cosmic-gold transition-colors duration-300" href="/servicios.html">Servicios</a></li>
+              <li><a class="text-cosmic-stardust/80 hover:text-cosmic-gold transition-colors duration-300" href="/lecturas.html">Lecturas</a></li>
+              <li><a class="text-cosmic-stardust/80 hover:text-cosmic-gold transition-colors duration-300" href="/contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-cosmic-gold font-heading text-xl mb-4">Contacto</h3>
+            <p class="text-cosmic-stardust/80 text-sm mb-4">Buenos Aires, Capital Federal<br>Argentina</p>
+            <div class="flex gap-4">
+              <a href="mailto:soporte@tarot-y-energia.xyz" class="text-cosmic-stardust hover:text-cosmic-gold transition-colors duration-300">Email</a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 pt-8 border-t border-cosmic-gold/20 text-center">
+          <p class="text-cosmic-stardust/60 text-sm">© 2026 Tarot Celestial. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

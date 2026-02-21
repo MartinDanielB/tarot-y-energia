@@ -1,0 +1,23 @@
+http:
+  middlewares:
+    secure-headers:
+      headers:
+        forceSTSHeader: true
+        stsSeconds: 31536000
+        stsIncludeSubdomains: true
+        contentTypeNosniff: true
+        browserXssFilter: true
+        frameDeny: true
+        referrerPolicy: "strict-origin-when-cross-origin"
+        customResponseHeaders:
+          Server: ""
+
+    rate-limit:
+      rateLimit:
+        average: 100
+        burst: 50
+
+    dashboard-auth:
+      basicAuth:
+        users:
+          - "admin:$$2y$$05$$c/nufEvs8WoXVw1KRx7o3u0Ej.LuawMc0jFmdhhA4wSi.zy.lmJVi"
