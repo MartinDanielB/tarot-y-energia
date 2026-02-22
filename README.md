@@ -1,4 +1,3 @@
-cat << 'EOF' > README.md
 # 🔮 Tarot y Energia — Self-Hosted Platform
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
@@ -13,13 +12,12 @@ A fully self-hosted tarot reading platform running on a home server with zero mo
 
 ## Architecture
 
-\`\`\`
+```
 Internet → Cloudflare (SSL + DDoS) → Cloudflare Tunnel → Traefik → Services
-
                                                                ├── Nginx (website)
                                                                ├── Portainer (management)
                                                                └── PostgreSQL (database, internal only)
-\`\`\`
+```
 
 ## Tech Stack
 
@@ -47,15 +45,15 @@ Internet → Cloudflare (SSL + DDoS) → Cloudflare Tunnel → Traefik → Servi
 
 ## Running Locally
 
-\`\`\`bash
+```bash
 git clone https://github.com/MartinDanielB/tarot-y-energia.git
 cd tarot-y-energia
 cp .env.example .env
 nano .env
 docker compose up -d
-\`\`\`
+```
 
 ## Author
 
 **MartinDanielB** — [github.com/MartinDanielB](https://github.com/MartinDanielB)
-EOF
+
