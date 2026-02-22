@@ -15,6 +15,7 @@ A fully self-hosted tarot reading platform running on a home server with zero mo
 
 \`\`\`
 Internet → Cloudflare (SSL + DDoS) → Cloudflare Tunnel → Traefik → Services
+
                                                                ├── Nginx (website)
                                                                ├── Portainer (management)
                                                                └── PostgreSQL (database, internal only)
